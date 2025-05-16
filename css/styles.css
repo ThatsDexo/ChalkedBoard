@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/wall.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.background img{
+    width: 100%;
+    height: auto;
+}
+
+#fridge img{
+    height: 75vh;
+}
