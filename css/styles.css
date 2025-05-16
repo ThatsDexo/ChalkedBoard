@@ -16,3 +16,9 @@ body{
 #fridge img{
     height: 75vh;
 }
+
+.user-form{
+    width: 20%;
+    justify-content: center;
+    background-color: black ;
+}

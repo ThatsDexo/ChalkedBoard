@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +9,16 @@
 </head>
 <body>
     <section>
-        <div>
-            <form id="user-form" method= "post" action="stickynote.php"> 
-            <input type="text" id="message" name="message" placeholder="Enter your message">
-            <input type="text" id="name" name ="name" placeholder="Enter your name"> 
+        
+            <form id="user-form" method= "post" action="pages/stickynote.php">
+                <div class="form-box">
+                    <input type="text" id="message" name="message" placeholder="Enter your message">
+                </div class="form-box">
+                <div class="form-box">
+                    <input type="text" id="name" name ="name" placeholder="Enter your name">
+                </div class="form-box">
+                    <input type="submit" value="Post">
+             
             </form>
         </div>
     </section>
