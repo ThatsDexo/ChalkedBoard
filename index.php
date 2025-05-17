@@ -1,10 +1,13 @@
 <?php
     require_once "pages/dbh.inc.php";
-    $query = "SELECT * FROM messages;";
+    $query = "SELECT * FROM wall;";
     $stmt = $pdo->prepare($query);
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    echo print_r($result);
+
+    // echo print_r($result);
+    // echo "<br>";
+    // echo $result[0]["message"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,8 +18,16 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <?php
+        foreach($result as $row) {
+           echo "<div class=poster style=\"position=relative; left:" . rand(1, 100) . "%; bottom:"
+            . rand(5, 100) . "%;\"> 
+            <img src=\"images/" . $row["cat_poster_file"] . "\">
+            <p>" . $row["message"] . "</p>
+            </div>";
+        }
+    ?>
     <section>
-        
             <form id="user-form" method= "post" action="pages/stickynote.php">
                 <div class="form-box">
                     <input type="text" id="message" name="message" placeholder="Enter your message">

@@ -11,7 +11,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     try{
         require_once "dbh.inc.php";
 
-        $query = "INSERT INTO messages (message, name, cat_poster_file) VALUES(:message, :name, :cat_poster_file)";
+        $query = "INSERT INTO wall (message, name, cat_poster_file) VALUES(:message, :name, :cat_poster_file)";
 
         $stmt = $pdo->prepare($query);
 
@@ -20,10 +20,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $stmt->bindParam(":name", $name);
     
         $stmt->execute();
-
-       
-
-
 
         $pdo = null;
         $stmt = null;
