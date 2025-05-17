@@ -3,7 +3,7 @@
     $username = "root";
     $password = "";
 
-    $dbs = "mysql:host=localhost;dbname=chalkedboard";
+    $dbs = "mysql:host=localhost;dbname=posterboard";
 
     try{
         $pdo = new PDO($dbs, $username, $password);
@@ -11,7 +11,7 @@
         
     }
     catch(PDOException $e){
-        echo "Error occured: " . $e.getMessage();
+        echo "Error occured: " . $e->getMessage();
 
     }
 
