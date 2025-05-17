@@ -1,4 +1,11 @@
-
+<?php
+    require_once "pages/dbh.inc.php";
+    $query = "SELECT * FROM messages;";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    echo print_r($result);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

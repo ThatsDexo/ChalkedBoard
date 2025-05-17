@@ -3,11 +3,11 @@
     $username = "root";
     $password = "";
 
-    $dbs = "mysql:host=localhost;dbname=chalkedboard"
+    $dbs = "mysql:host=localhost;dbname=chalkedboard";
 
     try{
         $pdo = new PDO($dbs, $username, $password);
-        $pdo->setAttribute(PDO::ATTR_ERROR, PDO::ERRMODE_EXCEPTION);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
     }
     catch(PDOException $e){
