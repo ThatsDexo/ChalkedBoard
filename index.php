@@ -41,7 +41,7 @@
                 <div class="form-box">
                     <input type="text" id="name" name ="name" placeholder="Enter your name">
                 </div class="form-box">
-                <div>
+                <div class="form-box">
                     <input type="submit" value="Post">
                 </div>
             </form>
