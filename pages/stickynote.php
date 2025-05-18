@@ -3,8 +3,10 @@
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $message = $_POST["message"];
     $name = $_POST["name"];
+    define("FILE_MIN_COUNT", 1);
+    define("FILE_MAX_COUNT", 6);
 
-    $cat_poster_file = "cat" . rand(1,6) . ".jpg";
+    $cat_poster_file = "cat" . rand(FILE_MIN_COUNT, FILE_MAX_COUNT) . ".jpg";
     
     
 
